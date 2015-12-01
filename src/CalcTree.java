@@ -8,7 +8,7 @@ public abstract class CalcTree {
 		this.child = new ArrayList<>();
 	}
 
-	public abstract void accept(CalcVisitor visitor);
+	public abstract int accept(CalcVisitor visitor);
 
 }
 
@@ -28,8 +28,8 @@ class Add extends BinaryExpr {
 	}
 
 	@Override
-	public void accept(CalcVisitor visitor) {
-		visitor.visit(this);
+	public int accept(CalcVisitor visitor) {
+		return visitor.visit(this);
 	}
 
 }
@@ -41,8 +41,8 @@ class Sub extends BinaryExpr {
 	}
 
 	@Override
-	public void accept(CalcVisitor visitor) {
-		visitor.visit(this);
+	public int accept(CalcVisitor visitor) {
+		return visitor.visit(this);
 	}
 
 }
@@ -54,8 +54,8 @@ class Mul extends BinaryExpr {
 	}
 
 	@Override
-	public void accept(CalcVisitor visitor) {
-		visitor.visit(this);
+	public int accept(CalcVisitor visitor) {
+		return visitor.visit(this);
 	}
 
 }
@@ -67,8 +67,8 @@ class Div extends BinaryExpr {
 	}
 
 	@Override
-	public void accept(CalcVisitor visitor) {
-		visitor.visit(this);
+	public int accept(CalcVisitor visitor) {
+		return visitor.visit(this);
 	}
 
 }
@@ -81,8 +81,8 @@ class Int extends CalcTree {
 	}
 
 	@Override
-	public void accept(CalcVisitor visitor) {
-		visitor.visit(this);
+	public int accept(CalcVisitor visitor) {
+		return visitor.visit(this);
 	}
 
 }

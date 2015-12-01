@@ -14,7 +14,6 @@ public class Main {
 			Parser p = c.newParser();
 			Tree<?> node = p.parseCommonTree(c.nextInput());
 			if(node != null){
-				eval(node);
 			}
 		} catch (IOException e) {
 			System.exit(1);
