@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 import nez.Parser;
-import nez.ast.Tree;
+import nez.ast.CommonTree;
 import nez.main.CommandContext;
 
 
@@ -12,8 +12,11 @@ public class Main {
 			CommandContext c = new CommandContext();
 			c.parseCommandOption(args, false/* nezCommand */);
 			Parser p = c.newParser();
-			Tree<?> node = p.parseCommonTree(c.nextInput());
+			CommonTree node = p.parseCommonTree(c.nextInput());
 			if(node != null){
+				CalcTree cnode = Translator.translate(node);
+				Evaluator evaluator = new Evaluator();
+				System.out.println(evaluator.eval(cnode));
 			}
 		} catch (IOException e) {
 			System.exit(1);

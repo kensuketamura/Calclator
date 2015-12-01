@@ -7,6 +7,7 @@ public class Evaluator extends CalcVisitor {
 
 	@Override
 	public int visit(Add node) {
+		int left = node.child.get(0).accept(this);
 		// TODO Auto-generated method stub
 		return 0;
 	}
