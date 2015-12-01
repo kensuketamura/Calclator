@@ -8,32 +8,34 @@ public class Evaluator extends CalcVisitor {
 	@Override
 	public int visit(Add node) {
 		int left = node.child.get(0).accept(this);
-		// TODO Auto-generated method stub
-		return 0;
+		int right = node.child.get(1).accept(this);
+		return left + right;
 	}
 
 	@Override
-	public int visit(Sub node) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int visit(Sub node) {	
+	int left = node.child.get(0).accept(this);
+	int right = node.child.get(1).accept(this);
+		return left - right;
 	}
 
 	@Override
 	public int visit(Mul node) {
-		// TODO Auto-generated method stub
-		return 0;
+		int left = node.child.get(0).accept(this);
+		int right = node.child.get(1).accept(this);
+		return left * right;
 	}
 
 	@Override
 	public int visit(Div node) {
-		// TODO Auto-generated method stub
-		return 0;
+		int left = node.child.get(0).accept(this);
+		int right = node.child.get(1).accept(this);
+		return left / right;
 	}
 
 	@Override
 	public int visit(Int node) {
-		// TODO Auto-generated method stub
-		return 0;
+		return node.val;
 	}
 
 }
