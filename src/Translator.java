@@ -26,6 +26,10 @@ public class Translator {
 			return new Equals(translate(node.get(0)), translate(node.get(1)));
 		case "NotEquals":
 			return new NotEquals(translate(node.get(0)), translate(node.get(1)));
+		case "LogicalAnd":
+			return new LogicalAnd(translate(node.get(0)), translate(node.get(1)));
+		case "LogicalOr":
+			return new LogicalOr(translate(node.get(0)), translate(node.get(1)));
 		default:
 			break;
 		}
