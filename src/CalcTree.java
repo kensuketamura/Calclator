@@ -8,7 +8,7 @@ public abstract class CalcTree {
 		this.child = new ArrayList<>();
 	}
 
-	public abstract int accept(CalcVisitor visitor);
+	public abstract Object accept(CalcVisitor visitor);
 
 }
 
@@ -28,7 +28,7 @@ class Add extends BinaryExpr {
 	}
 
 	@Override
-	public int accept(CalcVisitor visitor) {
+	public Object accept(CalcVisitor visitor) {
 		return visitor.visit(this);
 	}
 
@@ -41,7 +41,7 @@ class Sub extends BinaryExpr {
 	}
 
 	@Override
-	public int accept(CalcVisitor visitor) {
+	public Object accept(CalcVisitor visitor) {
 		return visitor.visit(this);
 	}
 
@@ -54,7 +54,7 @@ class Mul extends BinaryExpr {
 	}
 
 	@Override
-	public int accept(CalcVisitor visitor) {
+	public Object accept(CalcVisitor visitor) {
 		return visitor.visit(this);
 	}
 
@@ -67,7 +67,7 @@ class Div extends BinaryExpr {
 	}
 
 	@Override
-	public int accept(CalcVisitor visitor) {
+	public Object accept(CalcVisitor visitor) {
 		return visitor.visit(this);
 	}
 
@@ -81,8 +81,80 @@ class Int extends CalcTree {
 	}
 
 	@Override
-	public int accept(CalcVisitor visitor) {
+	public Object accept(CalcVisitor visitor) {
 		return visitor.visit(this);
 	}
 
+}
+
+class GreaterThanEquals extends BinaryExpr{
+	
+	public GreaterThanEquals(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
+}
+
+class LessThanEquals extends BinaryExpr{
+	
+	public LessThanEquals(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
+}
+
+class GreaterThan extends BinaryExpr{
+	
+	public GreaterThan(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
+}
+
+class LessThan extends BinaryExpr{
+	
+	public LessThan(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
+}
+
+class NotEquals extends BinaryExpr{
+	
+	public NotEquals(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
+}
+
+class Equals extends BinaryExpr{
+	
+	public Equals(CalcTree left, CalcTree right) {
+		super(left, right);
+	}
+
+	@Override
+	public Object accept(CalcVisitor visitor) {
+		return visitor.visit(this);
+	}
 }
