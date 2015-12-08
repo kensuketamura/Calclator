@@ -7,76 +7,67 @@ public class Evaluator extends CalcVisitor {
 
 	@Override
 	public Object visit(Add node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return left + right;
+		// TODO
+		return null;
 	}
 
 	@Override
-	public Object visit(Sub node) {	
-	int left = (int) node.child.get(0).accept(this);
-	int right = (int) node.child.get(1).accept(this);
-		return left - right;
+	public Object visit(Sub node) {
+		// TODO
+		return null;
 	}
 
 	@Override
 	public Object visit(Mul node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return left * right;
+		// TODO
+		return null;
 	}
 
 	@Override
 	public Object visit(Div node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return left / right;
+		// TODO
+		return null;
 	}
 
 	@Override
 	public Object visit(Int node) {
-		return node.val;
+		// TODO
+		return null;
 	}
 	
 	@Override
 	public Object visit(GreaterThanEquals node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return ( left >= right ) ? true : false;
+		// TODO
+		return null;
 	}
 	
 	@Override
 	public Object visit(LessThanEquals node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return ( left <= right ) ? true : false;
+		// TODO
+		return null;
 	}
 	
 	@Override
 	public Object visit(GreaterThan node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return ( left > right ) ? true : false;
+		// TODO
+		return null;
 	}
 	
 	@Override
 	public Object visit(LessThan node) {
-		int left = (int) node.child.get(0).accept(this);
-		int right = (int) node.child.get(1).accept(this);
-		return ( left < right ) ? true : false;
+		// TODO
+		return null;
 	}
 	
 	@Override
 	public Object visit(NotEquals node) {
-		Object left = node.child.get(0).accept(this);
-		Object right = node.child.get(1).accept(this);
-		return ( left != right ) ? true : false;
+		// TODO
+		return null;
 	}
 	
 	public Object visit(Equals node) {
-		Object left = node.child.get(0).accept(this);
-		Object right = node.child.get(1).accept(this);
-		return ( left == right ) ? true : false;
+		// TODO
+		return null;
 	}
 
 }
